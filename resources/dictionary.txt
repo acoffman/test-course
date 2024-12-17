@@ -2,7 +2,6 @@ AnVIL
 Audiographer
 Audiography
 BIPOC
-Bookdown
 Coursera
 DISCOVERABLE
 DataTrail
