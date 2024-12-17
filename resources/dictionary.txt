@@ -6,7 +6,6 @@ BIPOC
 another-word
 Bloomberg
 Bookdown
-chapt
 test
 Coursera
 creativecommons
