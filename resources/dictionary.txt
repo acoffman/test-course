@@ -19,7 +19,7 @@ FirstName
 Funder
 fyi
 GDSCN
-Generis
+test
 GH
 Github
 GitHub
