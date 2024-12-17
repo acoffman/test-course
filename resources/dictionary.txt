@@ -2,7 +2,6 @@ AnVIL
 Audiographer
 Audiography
 BIPOC
-DISCOVERABLE
 TEST
 DataTrail
 Datatrail
