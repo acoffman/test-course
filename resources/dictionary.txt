@@ -6,6 +6,7 @@ BIPOC
 Bloomberg
 Bookdown
 chapt
+test
 Coursera
 creativecommons
 css
