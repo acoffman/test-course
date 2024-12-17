@@ -2,7 +2,8 @@ AnVIL
 Audiographer
 Audiography
 automagic
-foo
+bar
+baz
 BIPOC
 Bloomberg
 Bookdown
@@ -10,8 +11,8 @@ chapt
 Coursera
 creativecommons
 css
-Datatrail
 DataTrail
+Datatrail
 DISCOVERABLE
 Dockerfile
 Dockerhub
@@ -20,17 +21,17 @@ enforceability
 faq
 favicon
 FirstName
+foo
 Funder
 fyi
 GDSCN
 Generis
 GH
-Github
 GitHub
+Github
 https
 ies
 iframe
-bar
 immunities
 impactful
 ITCR
@@ -38,8 +39,8 @@ itcrtraining
 ITN
 LastName
 Leanpub
-Licensor
 LICENSOR
+Licensor
 Markua
 mentorship
 MERCHANTABILITY
@@ -53,8 +54,8 @@ Pandoc
 png
 pre
 reproducibility
-rmarkdown
 RMarkdown
+rmarkdown
 Savonen
 sexualized
 socio
@@ -62,7 +63,6 @@ synched
 tada
 UE
 UE5
-baz
 underserved
 Videographer
 Videography
