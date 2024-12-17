@@ -8,8 +8,6 @@ chapt
 Coursera
 creativecommons
 css
-Datatrail
-DataTrail
 DISCOVERABLE
 Dockerfile
 Dockerhub
