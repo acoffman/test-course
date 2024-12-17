@@ -24,7 +24,6 @@ fyi
 GDSCN
 test
 GH
-Github
 GitHub
 dupliacte
 https
