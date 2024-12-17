@@ -56,12 +56,13 @@ jobs:
     name: Check spelling
     needs: yaml-check
     if: ${{needs.yaml-check.outputs.toggle_spell_check == 'yes'}}
-    uses: jhudsl/ottr-reports/.github/workflows/report-maker.yml@main
+    uses: jhudsl/ottr-reports/.github/workflows/report-maker.yml@acoffman-sorted-dict
     with:
       check_type: spelling
       error_min: 3
       gh_pat: secrets.GH_PAT
       branch_name: ${GITHUB_HEAD_REF}
+      sort_dictionary: true
 
   url-check:
     name: Check URLs
