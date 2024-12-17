@@ -6,7 +6,6 @@ BIPOC
 another test
 another-word
 Bookdown
-test
 test1
 Coursera
 creativecommons
