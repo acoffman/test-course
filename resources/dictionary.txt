@@ -5,6 +5,7 @@ automagic
 BIPOC
 Bloomberg
 chapt
+foo
 Coursera
 out-of-order
 creativecommons
