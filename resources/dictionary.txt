@@ -13,7 +13,6 @@ creativecommons
 css
 DISCOVERABLE
 Dockerfile
-Dockerhub
 actions
 dropdown
 enforceability
