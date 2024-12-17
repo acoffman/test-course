@@ -3,7 +3,6 @@ Audiographer
 Audiography
 BIPOC
 TEST
-DataTrail
 Datatrail
 Dockerfile
 Dockerhub
