@@ -38,6 +38,7 @@ ITCR
 itcrtraining
 ITN
 LastName
+github
 Leanpub
 Licensor
 LICENSOR
