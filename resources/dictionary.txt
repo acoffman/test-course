@@ -7,7 +7,6 @@ another test
 another-word
 Bookdown
 Coursera
-creativecommons
 css
 Datatrail
 DataTrail
