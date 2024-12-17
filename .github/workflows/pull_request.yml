@@ -60,7 +60,7 @@ jobs:
     with:
       check_type: spelling
       error_min: 3
-      gh_pat: secrets.GH_PAT
+      gh_pat: ${{ secrets.GH_PAT }}
       branch_name: ${GITHUB_HEAD_REF}
       sort_dictionary: true
 
