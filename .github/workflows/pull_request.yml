@@ -41,6 +41,16 @@ jobs:
           git push --set-upstream origin $branch_name || echo branch exists remotely
         shell: bash
 
+      - name: Error Reports
+        uses: jhudsl/ottr-reports@952579c1c6fe92dfe063c873247af8b975a3f7dc
+        secrets:
+          gh_pat: ${{ secrets.GH_PAT }}
+        with:
+          check_type: spelling
+          error_min: 3
+          branch_name: ${GITHUB_HEAD_REF}
+          sort_dictionary: false
+
 
     outputs:
       toggle_website: "${{ env.RENDER_WEBSITE }}"
@@ -52,16 +62,7 @@ jobs:
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
 
 ########################## Make the error reports ##############################
-  error-reports:
-    name: Error Reports
-    uses: jhudsl/ottr-reports@952579c1c6fe92dfe063c873247af8b975a3f7dc
-    secrets:
-      gh_pat: ${{ secrets.GH_PAT }}
-    with:
-      check_type: spelling
-      error_min: 3
-      branch_name: ${GITHUB_HEAD_REF}
-      sort_dictionary: false
+  # error-reports:
 
   # url-check:
   #   name: Check URLs
