@@ -54,15 +54,15 @@ jobs:
 ########################## Make the error reports ##############################
   error-reports:
     name: Error Reports
-    uses: jhudsl/ottr-reports/.github/workflows/main.yml@acoffman/artifacts
+    uses: jhudsl/ottr-reports@952579c1c6fe92dfe063c873247af8b975a3f7dc
     secrets:
       gh_pat: ${{ secrets.GH_PAT }}
-  #   with:
-  #     check_type: spelling
-  #     error_min: 3
-  #     branch_name: ${GITHUB_HEAD_REF}
-  #     sort_dictionary: true
-  #
+    with:
+      check_type: spelling
+      error_min: 3
+      branch_name: ${GITHUB_HEAD_REF}
+      sort_dictionary: false
+
   # url-check:
   #   name: Check URLs
   #   needs: yaml-check
