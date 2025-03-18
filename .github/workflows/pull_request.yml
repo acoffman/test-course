@@ -43,9 +43,8 @@ jobs:
 
       - name: Error Reports
         uses: jhudsl/ottr-reports@952579c1c6fe92dfe063c873247af8b975a3f7dc
-        secrets:
-          gh_pat: ${{ secrets.GH_PAT }}
         with:
+          token: ${{ secrets.GH_PAT }}
           check_type: spelling
           error_min: 3
           branch_name: ${GITHUB_HEAD_REF}
