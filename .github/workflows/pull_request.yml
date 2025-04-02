@@ -58,8 +58,6 @@ jobs:
     needs: yaml-check
     if: ${{needs.yaml-check.outputs.toggle_spell_check == 'yes'}}
     uses: jhudsl/ottr-reports/.github/workflows/main.yml@acoffman/artifacts
-    secrets:
-      gh_pat: ${{ secrets.GH_PAT }}
     with:
       check_spelling: ${{needs.yaml-check.outputs.toggle_spell_check == 'yes'}}
       spelling_error_min: 3
@@ -67,7 +65,6 @@ jobs:
       url_error_min: 3
       check_quiz_form: ${{needs.yaml-check.outputs.toggle_quiz_check == 'yes'}}
       quiz_error_min: 3
-      branch_name: ${GITHUB_HEAD_REF}
       sort_dictionary: true
 
 ############################# Style the code ###################################
