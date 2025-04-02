@@ -41,15 +41,6 @@ jobs:
           git push --set-upstream origin $branch_name || echo branch exists remotely
         shell: bash
 
-      - name: Error Reports
-        uses: jhudsl/ottr-reports@952579c1c6fe92dfe063c873247af8b975a3f7dc
-        with:
-          token: ${{ secrets.GH_PAT }}
-          check_type: spelling
-          error_min: 3
-          branch_name: ${GITHUB_HEAD_REF}
-          sort_dictionary: false
-
 
     outputs:
       toggle_website: "${{ env.RENDER_WEBSITE }}"
@@ -61,31 +52,22 @@ jobs:
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
 
 ########################## Make the error reports ##############################
-  # error-reports:
-
-  # url-check:
-  #   name: Check URLs
-  #   needs: yaml-check
-  #   if: ${{needs.yaml-check.outputs.toggle_url_check == 'yes'}}
-  #   uses: jhudsl/ottr-reportsl@acoffman/artifacts
-  #   secrets:
-  #     gh_pat: ${{ secrets.GH_PAT }}
-  #   with:
-  #     check_type: urls
-  #     error_min: 0
-  #     branch_name: ${GITHUB_HEAD_REF}
-  #
-  # quiz-check:
-  #   name: Check quiz formatting
-  #   if: ${{needs.yaml-check.outputs.toggle_quiz_check == 'yes'}}
-  #   needs: yaml-check
-  #   uses: jhudsl/ottr-reports/@acoffman/artifacts
-  #   secrets:
-  #     gh_pat: ${{ secrets.GH_PAT }}
-  #   with:
-  #     check_type: quiz_format
-  #     error_min: 0
-  #     branch_name: ${GITHUB_HEAD_REF}
+  ottr-reports:
+    name: Check spelling, urls, and formatting
+    needs: yaml-check
+    if: ${{needs.yaml-check.outputs.toggle_spell_check == 'yes'}}
+    uses: jhudsl/ottr-reports/.github/workflows/report-maker.yml@acoffman/artifacts
+    secrets:
+      gh_pat: ${{ secrets.GH_PAT }}
+    with:
+      check_spelling: ${{needs.yaml-check.outputs.toggle_spell_check == 'yes'}}
+      spelling_error_min: 3
+      check_urls: ${{needs.yaml-check.outputs.toggle_url_check == 'yes'}}
+      url_error_min: 3
+      check_urls: ${{needs.yaml-check.outputs.toggle_quiz_check == 'yes'}}
+      quiz_error_min: 3
+      branch_name: ${GITHUB_HEAD_REF}
+      sort_dictionary: true
 
 ############################# Style the code ###################################
   style-code:
@@ -237,3 +219,4 @@ jobs:
 
             _Updated at ${{ steps.build-components.outputs.time }} with changes from ${{ steps.build-components.outputs.commit_id }}_
           edit-mode: replace
+
