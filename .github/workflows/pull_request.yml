@@ -56,7 +56,6 @@ jobs:
   ottr-reports:
     name: Check spelling, urls, and formatting
     needs: yaml-check
-    if: ${{needs.yaml-check.outputs.toggle_spell_check == 'yes'}}
     uses: jhudsl/ottr-reports/.github/workflows/main.yml@acoffman/artifacts
     with:
       check_spelling: ${{needs.yaml-check.outputs.toggle_spell_check == 'yes'}}
