@@ -9,6 +9,8 @@ test tyyppo
 
 this is a spelllling error
 
+speled wrogn
+
 tes
 
 test again
