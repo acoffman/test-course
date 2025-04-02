@@ -4,6 +4,7 @@
 name: Pull Request
 
 on:
+  workflow_trigger:
   pull_request:
     branches: [ main, staging ]
 
